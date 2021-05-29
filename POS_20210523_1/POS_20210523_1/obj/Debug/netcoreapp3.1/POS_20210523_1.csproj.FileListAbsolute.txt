@@ -1,4 +1,0 @@
-C:\Users\froze\source\repos\POS_20210523_1\POS_20210523_1\obj\Debug\netcoreapp3.1\POS_20210523_1.csprojAssemblyReference.cache
-C:\Users\froze\source\repos\POS_20210523_1\POS_20210523_1\obj\Debug\netcoreapp3.1\POS_20210523_1.AssemblyInfoInputs.cache
-C:\Users\froze\source\repos\POS_20210523_1\POS_20210523_1\obj\Debug\netcoreapp3.1\POS_20210523_1.AssemblyInfo.cs
-C:\Users\froze\source\repos\POS_20210523_1\POS_20210523_1\obj\Debug\netcoreapp3.1\POS_20210523_1.csproj.CoreCompileInputs.cache

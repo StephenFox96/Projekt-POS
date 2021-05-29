@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace POS
 {
+    /// <summary>
+    /// Main class, containing Main method and uses Startup class.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)

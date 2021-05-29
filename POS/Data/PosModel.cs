@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace POS.Data
 {
+    //Model of database structure to be displayed on site
     public class PosModel
     {
         public DateTime Date { get; set; }

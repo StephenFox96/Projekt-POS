@@ -46,7 +46,7 @@ namespace POS_20210523_1
 
             AcquireData Acquire = new AcquireData();
 
-            double[] tablica = new double[2];
+            double[] tablica = new double[3];
             tablica = Acquire.ReadBME();
 
             double [] tab = new double [2];
@@ -109,7 +109,7 @@ namespace POS_20210523_1
         /// @retval FALSE   alarm is off
         static double[] ActivateAlarm(double TempALM_HH, double TempALM_LL, double Pres_ALM_HH, double Pres_ALM_LL, double Hum_ALM_HH, double Hum_ALM_LL, double COtwo_ALM_HH, double COtwo_ALM_LL, double temperature, double preassure, double humidity, double COtwo)
         {
-            double[] ALMtab = new double[7];
+            double[] ALMtab = new double[8];
             
             for (int i=0; i<ALMtab.Length; i++)
             {
@@ -118,37 +118,111 @@ namespace POS_20210523_1
 
             while (true)
             {
-                if (temperature > TempALM_HH)
-                { ALMtab[0] = 1; }
-                else ALMtab[0] = 0;
+                switch (temperature > TempALM_HH)
+                {
+                    case true:
+                        ALMtab[0] = 1;
+                        break;
+                    case false:
+                        ALMtab[0] = 0;
+                        break;
+                    default:
+                        ALMtab[0] = 0;
+                        break;
+                }
 
-                if (temperature < TempALM_LL)
-                { ALMtab[1] = 1; }
-                else ALMtab[1] = 0;
+                switch (temperature > TempALM_LL)
+                {
+                    case true:
+                        ALMtab[1] = 1;
+                        break;
+                    case false:
+                        ALMtab[1] = 0;
+                        break;
+                    default:
+                        ALMtab[1] = 0;
+                        break;
+                }
 
-                if (humidity > Hum_ALM_HH)
-                { ALMtab[2] = 1; }
-                else  ALMtab[2] = 0;
+                switch (humidity > Hum_ALM_HH)
+                {
+                    case true:
+                        ALMtab[2] = 1;
+                        break;
+                    case false:
+                        ALMtab[2] = 0;
+                        break;
+                    default:
+                        ALMtab[2] = 0;
+                        break;
+                }
 
-                if (humidity < Hum_ALM_LL)
-                { ALMtab[3] = 1; }
-                else ALMtab[3] = 0;
+                switch (humidity < Hum_ALM_LL)
+                {
+                    case true:
+                        ALMtab[3] = 1;
+                        break;
+                    case false:
+                        ALMtab[3] = 0;
+                        break;
+                    default:
+                        ALMtab[3] = 0;
+                        break;
+                }
 
-                if (preassure > Pres_ALM_HH)
-                { ALMtab[4] = 1; }
-                else ALMtab[4] = 0;
+                switch (preassure > Pres_ALM_HH)
+                {
+                    case true:
+                        ALMtab[4] = 1;
+                        break;
+                    case false:
+                        ALMtab[4] = 0;
+                        break;
+                    default:
+                        ALMtab[4] = 0;
+                        break;
+                }
 
-                if (preassure < Pres_ALM_LL)
-                { ALMtab[5] = 1; }
-                else ALMtab[5] = 0;
+                switch (preassure < Pres_ALM_LL)
+                {
+                    case true:
+                        ALMtab[5] = 1;
+                        break;
+                    case false:
+                        ALMtab[5] = 0;
+                        break;
+                    default:
+                        ALMtab[5] = 0;
+                        break;
+                }
 
-                if (COtwo > COtwo_ALM_HH)
-                { ALMtab[6] = 1; }
-                else ALMtab[6] = 0;
+                switch (COtwo > COtwo_ALM_HH)
+                {
+                    case true:
+                        ALMtab[6] = 1;
+                        break;
+                    case false:
+                        ALMtab[6] = 0;
+                        break;
+                    default:
+                        ALMtab[6] = 0;
+                        break;
+                }
 
-                if (COtwo < COtwo_ALM_LL)
-                { ALMtab[7] = 1; }
-                else ALMtab[7] = 0;
+
+                switch (COtwo < COtwo_ALM_LL)
+                {
+                    case true:
+                        ALMtab[7] = 1;
+                        break;
+                    case false:
+                        ALMtab[7] = 0;
+                        break;
+                    default:
+                        ALMtab[7] = 0;
+                        break;
+                }
+
 
                 return ALMtab;
             }

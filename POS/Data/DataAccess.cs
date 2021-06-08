@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace POS.Data
-{  
+{
     /// <summary>
     /// Class accessing database
     /// </summary>
-    public class DataAccess
+    public class DataAccess : IDataAccess
     {
         /// <summary>
         /// Method that loads data from database

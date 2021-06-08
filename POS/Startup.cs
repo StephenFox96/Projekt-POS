@@ -28,7 +28,7 @@ namespace POS
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<DataAccess>();
+            services.AddSingleton<IDataAccess, DataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
